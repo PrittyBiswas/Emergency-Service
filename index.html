@@ -13,24 +13,24 @@
     <nav class="bg-white shadow p-4 flex justify-between items-center">
         <div class="flex items-center gap-3">
             <img class="w-10 h-10" src="assets/logo.png" alt="">
-            <div class="font-bold text-xl">Emergency Service</div>
+            <div class="font-bold text-xl">Emergency  <br>Service</div>
         </div>
         <div class="flex gap-4">
-            <div>❤️ <span id="heartCount">0</span></div>
-            <div>🪙 <span id="coinCount">100</span></div>
-            <div>📋 <span id="copyCount">0</span></div>
+            <div class="bg-green-100 px-3 py-2 rounded-2xl"> <span id="heartCount">0 </span> ❤️</div>
+            <div class="bg-green-100 px-3 py-2 rounded-2xl"> <span id="coinCount">100 </span> 🪙</div>
+            <div class="bg-green-500 text-white px-3 py-2 rounded-full"> <span id="copyCount">0 </span>Copy</div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-green-800 to-green-700 text-center text-white py-10">
+    <section class="bg-gradient-to-r from-green-800 to-green-700 text-center text-white py-5">
         <div class="w-20 h-20 rounded-full mx-auto mb-3 flex items-center justify-center  relative">
 
             <img class="absolute" src="assets/logo-dark.png" alt="">
 
         </div>
-        <h1 class="text-2xl font-bold mb-2">Emergency Service Directory</h1>
-        <p class="text-sm max-w-2xl mx-auto">
+        <h1 class="text-2xl font-bold mb-2">জরুরি সেবা ডিরেক্টরি</h1>
+        <p class="text-sm  mx-auto">
             Government Emergency Services at Your Fingertip – A Project by Government of the People's
             Republic of Bangladesh
         </p>
@@ -48,7 +48,7 @@
         <section class="bg-white mt-10 mx-6 p-6 rounded-2xl shadow-lg">
             <div class="flex justify-between items-center mb-4">
                 <h2 class="font-bold text-sm">Call History</h2>
-                <button id="clearHistory" class="bg-red-500 text-white px-3 py-1 rounded">Clear</button>
+                <button id="clearHistory" class="bg-green-500 text-white px-3 py-1 rounded-full ml-6">Clear</button>
             </div>
             <ul id="historyList" class="space-y-2 text-sm text-gray-700"></ul>
         </section>
