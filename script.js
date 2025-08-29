@@ -36,5 +36,37 @@ hotline.forEach(service => {
   `;
 
 
+    const heartBtn = card.querySelector(".heartBtn");
+    let loved = false;
+    heartBtn.addEventListener("click", () => {
+        loved = !loved;
+        if (loved) {
+            heartBtn.classList.remove("text-gray-400");
+            heartBtn.classList.add("text-red-500");
+            heartCount++;
+        } else {
+            heartBtn.classList.remove("text-red-500");
+            heartBtn.classList.add("text-gray-400");
+            heartCount--;
+        }
+        document.getElementById("heartCount").textContent = heartCount;
+    });
 
-})
+    card.querySelector(".copyBtn").addEventListener("click", () => {
+        navigator.clipboard.writeText(service.number);
+        copyCount++;
+        document.getElementById("copyCount").textContent = copyCount;
+    });
+
+    card.querySelector(".callBtn").addEventListener("click", () => {
+        const li = document.createElement("li");
+        li.textContent = `${service.name_en} (${service.number}) - ${new Date().toLocaleTimeString()}`;
+        historyList.appendChild(li);
+    });
+
+    container.appendChild(card);
+});
+
+clearHistory.addEventListener("click", () => {
+    historyList.innerHTML = "";
+});
